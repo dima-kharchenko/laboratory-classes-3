@@ -1,30 +1,23 @@
 <html>
   <head>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <title><%= headTitle %></title>
   </head>
   <body>
   <main>
     <!-- 🏗 Structo the Builder -->
     <!-- Wykorzystaj odpowiednią składnię EJS do odpowiednich zadań. -->
-    <!-- Podpowiedź: <%- include(..., { menuLinks: ..., activeLinkPath: ... }); %> -->
     <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
-    <h1>Add product</h1>
-    <form action="/product/add" method="POST">
+    <h1 class="heading">Add product</h1>
+    <form action="/products/add" method="POST">
+      <div class="form__group">
+      <label class="form__label">Name</label><input type="text" name="name" class="form__input" />
+      </div>
+      <div class="form__group">
+      <label class="form__label">Description</label><input type="text" name="description"  class="form__input" />
+      </div>
       <br />
-      <label>
-        Name
-        <br />
-        <input type="text" name="name" />
-      </label>
-      <br />
-      <label>
-        Description
-        <br />
-        <input type="text" name="description" />
-      </label>
-      <br />
-      <button type="submit">Add</button>
+      <button type="submit" class="button">Add</button>
     </form>
   </main>
   </body>
