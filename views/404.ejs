@@ -1,0 +1,15 @@
+<html lang="pl_PL">
+  <head>
+    <!-- 🏗 Structo the Builder -->
+    <!-- Wykorzystaj odpowiednią składnię EJS do odpowiednich zadań. -->
+    <!-- Podpowiedź: <title><%= headTitle %> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <title><%= headTitle %></title>
+  </head>
+  <body>
+  <main>
+    <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
+    <h1>404 - Not Found</h1>
+  </main>
+  </body>
+</html>

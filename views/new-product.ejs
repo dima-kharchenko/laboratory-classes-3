@@ -1,0 +1,23 @@
+const renderNewProductPage = (data) => {
+  return `
+    <html>
+        <body>
+        <main>
+            <head>
+                <link rel="stylesheet" href="css/main.css" />
+                <title><%= headTitle %></title>
+            </head>
+            <%- include('partials/navigation', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
+            <h1>Newest product</h1>
+            ${
+              data
+                ? `<br /><div>New product data - ${data}</div>`
+                : "<br /><div>No new products available.</div>"
+            }
+        </main>
+        </body>
+    </html>
+    `;
+};
+
+module.exports = renderNewProductPage;
